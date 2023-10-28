@@ -1,0 +1,28 @@
+#Python code:) 
+#By Rohit Sharma
+import random
+def get_choices():
+  player_choice = input("Enter your choice (Rock, Paper, Scissor): ")
+  option = ["Rock", "Paper", "Scissor"]
+  computer_choice = random.choice(option)
+  choice = {"player" : player_choice , "computer": computer_choice}
+  return choice
+def check(player,computer):
+  print("You choose "+ player+" computer Choose "+computer)
+  if player==computer:
+    return "It's a tie"
+  elif player== "Rock" and computer == "Paper":
+    return "Computer win"
+  elif player== "Rock" and computer == "Scissor":
+    return "Player win"
+  elif player== "Paper" and computer == "Rock":
+    return "Player win"  
+  elif player== "Paper" and computer == "Scissor":
+    return "Computer win"
+  elif player== "Scissor" and computer == "Paper":
+    return "Player win"
+  elif player== "Scissor" and computer == "Rock":
+    return "computer win"
+choice = get_choices()
+result = check(choice["player"], choice["computer"])
+print(result)
